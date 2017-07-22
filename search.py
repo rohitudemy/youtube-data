@@ -26,7 +26,7 @@ def youtube_search(options):
   qr = csv.reader(q)
 
   wr.writerow(['keyword','id','title','channel_id','channel_title','published_date','description',
-               'views','likes','dislikes','comment_count'])
+    'views','likes','dislikes','comment_count','rank'])
 
 
   ids = []
@@ -41,7 +41,9 @@ def youtube_search(options):
   likes = []
   dislikes = []
   comments = []
-  
+  rank = 1
+  keywords_remaining = sum(1 for row in qr)
+  q.seek(0)
 
   for row in qr:
 
@@ -76,8 +78,13 @@ def youtube_search(options):
           except KeyError:
             comments = 0
 
-        wr.writerow([keyword, ids, title, channel_id, channel_title, published_date, description, views, likes, dislikes, comments])
-  
+        wr.writerow([keyword, ids, title, channel_id, channel_title, published_date, description, 
+          views, likes, dislikes, comments, rank])
+        rank += 1
+
+    rank = 1
+    keywords_remaining -= 1
+    print 'Keywords Remaining: %s' % keywords_remaining
 
   f.close()
   q.close()
