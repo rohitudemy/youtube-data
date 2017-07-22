@@ -25,7 +25,8 @@ def youtube_search(options):
   wr = csv.writer(f)
   qr = csv.reader(q)
 
-  wr.writerow(['keyword','id','title','channel_id','channel_title','published_date','description','views','likes','dislikes','comment_count'])
+  wr.writerow(['keyword','id','title','channel_id','channel_title','published_date','description',
+               'views','likes','dislikes','comment_count'])
 
 
   ids = []
