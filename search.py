@@ -11,7 +11,7 @@ reload(sys)
 sys.setdefaultencoding('utf-8')
 
 
-DEVELOPER_KEY = "AIzaSyAiWWxMUwCr7ggubQU_qo4rBOWDj-sB5m4"
+DEVELOPER_KEY = ""
 YOUTUBE_API_SERVICE_NAME = "youtube"
 YOUTUBE_API_VERSION = "v3"
 
