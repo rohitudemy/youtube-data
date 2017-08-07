@@ -88,7 +88,7 @@ def udemy_youtube(options):
 if __name__ == "__main__":
     argparser.add_argument("--file", help="File name", default="queries.csv")
     argparser.add_argument("--max", help="Max results", default=25)
-    argparser.add_argument("--key", help="Developer Key", default="")
+    argparser.add_argument("--key", help="Developer Key", default="YOUR_KEY_HERE")
     args = argparser.parse_args()
 
     try:
