@@ -60,7 +60,7 @@ def udemy_youtube(options):
 
                 video_response = youtube.videos().list(
                     id=search_result["id"]["videoId"],
-                    part="snippets,statistics"
+                    part="snippet,statistics"
                 ).execute()
 
                 for video_stats in video_response.get("items", []):
