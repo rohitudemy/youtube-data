@@ -23,23 +23,24 @@ Follow these steps to set up your one time token for the YouTube Data API
 #### Set up Google Cloud Project
 
 1. Go to [Google Developers API Console](https://code.google.com/apis/console)
-2. Create a project
-3. In the list of APIs, Select the YouTube Data API
-4. Click "Enable"
-5. Click "Create credentials"
-6. From the drop down menus, select the following:
+2. Create a project (may take a minute - monitor and click through on the Notifications bell)
+3. In the left dropdown menu, select API Manager >> Dashboard >> Enable
+4. In the list of APIs, Select the YouTube Data API
+5. Click "Enable"
+6. Click "Create credentials"
+7. From the drop down menus, select the following:
  - YouTube Data API v3
  - Other non-UI
  - Public data
-7. Click "What credentials do I need?"
-8. Copy the API key
-9. Click Done
-10. Open the search.py file in a text editor
-11. At the very bottom, replace "YOUR_KEY_HERE" with your key in the default section of this line:
+8. Click "What credentials do I need?"
+9. Copy the API key
+10. Click Done
+11. Open the search.py file in a text editor
+12. At the very bottom, replace "YOUR_KEY_HERE" with your key in the default section of this line:
  ```
  argparser.add_argument("--key", help="Developer Key", default="YOUR_KEY_HERE")
  ```
-12. Save the search.py file
+13. Save the search.py file
 
 #### Running the program
 
