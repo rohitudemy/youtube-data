@@ -57,7 +57,7 @@ def udemy_youtube(options):
     search_response = youtube.search().list(
       q=keyword,
       part="id,snippet",
-      maxResults=options.max_results
+      maxResults=options.max
     ).execute()
 
     for search_result in search_response.get("items", []):
@@ -96,7 +96,7 @@ def udemy_youtube(options):
 
 if __name__ == "__main__":
   argparser.add_argument("--file", help="File name", default="queries.csv")
-  argparser.add_argument("--max-results", help="Max results", default=25)
+  argparser.add_argument("--max", help="Max results", default=25)
   argparser.add_argument("--key", help="Developer Key", default="")
   args = argparser.parse_args()
 
